@@ -1,6 +1,0 @@
-massage=("|rx#duh#juhdwh")
-         
-            
-for i in (massage):
-    i=chr(ord(i)-3)
-    print(i, end="")
