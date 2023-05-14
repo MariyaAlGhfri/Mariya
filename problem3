@@ -1,0 +1,17 @@
+ #non repeated elements in a list array=[1,2,7,5,8,2,1]
+
+
+def frequency(array, x):
+ 
+    for i in range(x):
+        j = 0
+        while(j < x):
+            if (i != j and array[i] == array[j]):
+                break
+            j += 1
+        if (j == x):
+            return array[i]
+ 
+array = [1,2,7,5,8,2,1]
+x = len(array)
+print(frequency(array, x))
