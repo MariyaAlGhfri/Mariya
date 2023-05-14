@@ -1,0 +1,53 @@
+#enter paasword and check password valid or not:
+#1-8cha or more and lower ,upper ,number, spiecal(@,#,$)
+
+length = lower = upper = digit =spichl= False
+
+password = input('Enter the password: ')
+
+if len(password)>= 8:
+    length = True
+    
+    for i in password:
+        if i.islower():
+            lower = True
+        elif i.isupper():
+            upper = True
+        elif i.isdigit():
+            digit = True
+        elif i=="@" or i=="#" or i=="$" or i=="-":
+            spichl=True
+        
+
+
+if length and lower and upper and digit:
+    print('That is a strong password.')
+else:
+    print('That password is not valid.')
+    
+    
+#random quation
+from random import random
+
+print(round(random()*100))
+
+
+#guss quation in chpter 
+
+from random import randint
+
+for i in range(100):
+    guess=int(input("guess number : "))
+    if guess==17:
+        print("congratulation! you win")
+    elif guess>=1 and guess<=16:
+        print("Go higher")
+    elif guess>=18 and guess<=99:
+        print("Go lower")
+    elif guess>100:
+        print("your guess is outside range 1-100!")
+    else:
+        print("try agin!!")
+        
+
+
