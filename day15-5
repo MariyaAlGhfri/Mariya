@@ -1,0 +1,65 @@
+#
+
+import math
+
+def area(n,s):
+    area1=((n*(s**2))/(4*(math.tan(math.pi/n))))
+    return area1
+n=int(input("enter number of side : "))
+s=float(input("enter side: "))
+print(area(n,s))
+
+
+
+#sum all digit for enter user
+
+def sum_digit(n):
+    
+    sum = 0
+    for digit in str(n): 
+      sum += int(digit)      
+    return sum
+   
+n =input("enter number: ")
+print(sum_digit(n))
+
+
+
+
+###############
+
+x=[22,3,-2,-1,10,1]
+
+#print all element in row
+i=0
+for elements in x:
+    print(elements, end="  ")
+
+
+#computing all elements
+count=0
+multi=1
+for elements in x:
+    multi*=elements
+print("")
+print(multi)
+    
+#list nagetive number 
+for element in x:
+    if element <0:
+        count+=1
+print("negative number : ",count)
+    
+    
+#Write a Python program to find the list of words that are longer than n from a given list of words.
+
+word=['orange','apple','pear','banana','kiwi']
+
+n=int(input("enter number: "))
+
+listnew = []
+for x in word:
+    if len(x) > n:
+        listnew.append(x)
+print(listnew)
+
