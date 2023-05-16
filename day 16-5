@@ -1,0 +1,38 @@
+#
+x=['1','2','3']
+for i in x:
+    c="|".join(x)
+print(c)
+
+#
+result=[]
+for i in range(5):
+    result.append(i**2)
+print(result)
+
+#
+result=[]
+for i in range(5):
+    if(i%2==0):
+        result.append(i)
+print(result)
+
+#
+result=[]
+result=[i**2 for i in range(5)]
+print(result)
+
+#
+result=[]
+result=[i for i in range(5) if(i%2==0)]
+print(result)
+
+
+
+
+#dirction
+dec={1:{"name":"p1","age":22},
+     2:{"name":"p2","age":27}}
+for key in dec:
+    if dec[key]["age"] >25:
+        print(dec[key]["name"])
