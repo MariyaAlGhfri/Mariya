@@ -1,0 +1,54 @@
+#average of salary and max
+
+input_file=open("name.txt", "r")
+employee={}
+salary=[]
+for line in (input_file):
+    data=line.split()
+    salary.append(float(data[0]))
+    employee[data[1]]=data[0]
+print(employee)
+print(salary)
+avg=sum(salary)/len(salary)
+print(avg)
+x=max(salary)
+for key in employee:
+    if(float(employee[key])==x):
+        print(key)
+input_file.close()
+
+
+#q1 
+file=open("q1.txt", "r")
+speed=[]
+time=[]
+for line in (file):
+    data=line.split()
+    speed.append(int(data[0]))
+    time.append(int(data[1]))
+print(speed)
+print(time)
+for i in time:
+    dis1=speed[0]*time[0]
+    dis2=speed[1]*time[1]
+print(dis1)
+print(dis2)
+    
+file.close()
+
+
+
+#q2
+file=open("q2.txt", "r")
+fector=[]
+
+for line in file:
+    n=int(line)
+    print(n)
+ 
+    for i in range(1,n+1):
+        if n%i==0:
+           fector.append(i)
+    print(fector)
+    fector=[]
+file.close()
