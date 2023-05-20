@@ -1,0 +1,5 @@
+array = [1,2,3,4,5]
+
+print (str(array))
+array = array[2:] + array[:2]
+print ("rotate 2: " + str(array))
