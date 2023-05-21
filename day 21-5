@@ -1,0 +1,111 @@
+class person:
+    no_of_persons=0
+    def __init__(self, name,age):
+        self.name=name
+        self.age=age
+        person.no_of_persons +=1
+    def __decrip(self):
+        return f"this person name is {self.name}and {self.age} years old".format
+    
+p1 = person("hamza", 22)
+p2 = person("ali", 22)
+#print(p1.__decrip())
+print(p1.no_of_persons)
+
+
+
+#########################################################
+
+class employee:
+    def __init__(self, name,emp_id,salary, department):
+        self.emp_id=emp_id
+        self.name=name
+        self.salary=salary
+        self.department=department
+        
+    def print_employee(self):
+        return "employee details : {} {} {} {}".format(self.name,self.emp_id,self.salary, self.department)
+    
+    def assign_empployee_dep(self,new_dep):
+        self.department=new_dep
+        
+    def calculate_emp_salary(self,hours,overtime,amount):
+        hours=60
+        if hours<50:
+            overtime=hours-50
+            amount=(overtime*(salary/50))
+
+emp1=employee("ADAMS","E7876",50000,"ACCOUNTING")
+emp2=employee("JONES","E7499",45000,"RESEARCH")
+emp3=employee("MARTIN","E7900",50000,"SALES")
+emp4=employee("SMITH","E7698",55000,"OPERATIONS")
+
+emp1.assign_empployee_dep("SALES")
+print(emp1.print_employee())
+print(emp2.calculate_emp_salary(amount))
+
+
+########################################################
+
+
+from datetime import date
+class person:
+    
+    def __init__(self, name,age,address, hours):
+        self.name=name
+        self.age=age
+        self.address=address
+        self.hours=hours
+    def class_type(self):
+        return f"this is partner class"
+    
+class student(person):
+    def __init__(self, name,age,address, hours, grade):
+        super().__init__(name,age,address, hours)
+        self.grade=grade
+    
+    def class_type(self):
+        return f"this is student class"
+        
+    @classmethod
+    def new_studnt(cls,name,birth_year,address, hours, grade)
+        return cls(name,date.today().year - birth_year ,address, hours, grade)
+        
+s1= student("salim",23, "muscat", 180,[3.1,2.5,2])
+p1= person("aaa",23, "muscat", 180)
+print(date.today)
+
+print(p1.class_type())
+print(s1.class_type())
+
+
+
+##########################
+
+
+class Bankaccount:
+    def __init__(self, account_number,balance,date_of_opening,customr_name):
+        self.account_number=account_number
+        self.balance=balance
+        self.date_of_opening=date_of_opening
+        self.customr_name=customr_name
+        
+    def deposit(self,new_balance):
+        self.balance+=new_balance
+        return self.balance
+    
+    def withdarw(self, balance_withdarw):
+        self.balance-=balance_withdarw
+        return self.balance
+       
+    def check_balance(self):
+        return "account number: {}  balance: {}  date of opening: {} customr name: {}".format(self.account_number,self.balance,self.date_of_opening,self.customr_name)
+    
+         
+c1=Bankaccount(12345,500,"3-may","Ali")
+c2=Bankaccount(54321,800,"2-may","salim")
+c3=Bankaccount(98765,200,"1-may","aa")
+c1.deposit(100)
+c2.withdarw(300)
+print(c1.check_balance())
+print(c2.check_balance())
