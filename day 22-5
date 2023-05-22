@@ -1,0 +1,23 @@
+class Stack:
+    def __init__(self,lis,value,abc):
+        self.lis=lis
+        self.value=value
+        self.abc=abc
+        
+    def add(self,lis,value):
+        for i in range(len(value)):
+            lis.append(value[i])
+        print(lis)
+        
+    def output(self,lis,abc):
+        for i in range(len(lis)):
+            abc.append(lis.pop())
+        print(abc)
+
+value="Hello"
+lis=[]
+abc=[]
+s1=Stack(lis,value,abc)
+s1.add(lis,value)
+s1.output(lis,abc)
+
