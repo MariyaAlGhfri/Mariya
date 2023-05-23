@@ -1,0 +1,91 @@
+#basic of binary
+
+def binary_search(list1, n):  
+    low = 0  
+    high = len(list1) - 1  
+    mid = 0  
+    while low <= high:     
+        mid = (high + low) // 2    
+        if list1[mid] < n:  
+            low = mid + 1  
+        elif list1[mid] > n:  
+            high = mid - 1  
+        else:  
+            return mid  
+    return -1     
+list1 = [12, 24, 32, 39, 45, 50, 54]  
+n = 39      
+result = binary_search(list1, n)   
+if result != -1:
+    print("Element is present at index", str(result))  
+else:
+    print("Element is not present in list1") 
+
+###########################################################
+#sqrt number witm binary
+
+def sqrt(x):
+    x=int(input("enter number: "))
+    result = 0
+    start = 1
+    end = x // 2
+    while start <= end:
+        mid = (start + end) // 2
+        sqr = mid*mid
+        if sqr == x:
+            return mid
+        elif sqr < x:
+            start = mid + 1
+            result = mid
+        else:
+            end = mid - 1
+    return result
+
+for i in range(16 + 1):
+    print(f'{sqrt(i)}')
+    
+#######################################################
+#insertion works
+    
+def insertion(array):
+    
+    for step in range(1, len(array)):
+        key= array[step]
+        j=step-1
+        
+    while j>=0 and key<array[j]:
+        array[j+1]=array[j]
+        j=j-1
+        
+    array[j+1]=key
+
+  
+array=[9,16,3,4,1]
+insertion(array)
+print("sorted",array)
+
+
+###########################################################
+
+#order age of list
+
+def insertion(lis):
+    
+    for step in range(1, len(lis)):
+        key= lis[step]
+        j=step-1
+                
+        while j>=0 and key.split(',',1)[1]<lis[j].split(',',1)[1]:
+            lis[j+1]=lis[j]
+            j=j-1
+            
+        lis[j+1]=key
+    print(lis)
+  
+lis=["said,25","majed,19","salim,32","ali,21","sultan,28"]
+insertion(lis)
+s = [item.split(',')[0] for item in lis]
+print(s)
+
+#####################################################
+
