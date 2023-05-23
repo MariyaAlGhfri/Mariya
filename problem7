@@ -1,10 +1,8 @@
 def frequency(lis):
     counter = 0
-    num = lis[0]
     for i in lis:
         n = lis.count(i)
         if(n> counter):
-            counter = n
             num = i
     return num
 lis = [1,8,7,4,1,2,2,2]
