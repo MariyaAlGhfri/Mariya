@@ -1,0 +1,28 @@
+
+#xml file
+<model>
+  <child name="Acer" qty="12">Acer is a laptop</child>
+  <unique>Add model number here</unique>
+  <child name="Onida" qty="10">Onida is an oven</child>
+  <child name="Acer" qty="7">Exclusive</child>
+  <unique>Add price here</unique>
+  <data>Add content here
+     <family>Add company name here</family>
+     <size>Add number of employees here</size>
+  </data>
+</model>
+
+
+
+#
+
+import xml.etree.ElementTree as ET 
+ 
+tree = ET.parse('model1.xml') 
+root = tree.getroot() 
+print(root)  
+print(root[0].attrib)
+print(root[2].attrib)
+print(root[3].attrib)
+print(root[5][0].text)
+print(root[5][1].text)
